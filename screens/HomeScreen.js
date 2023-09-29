@@ -75,7 +75,7 @@ export default function HomeScreen() {
                 }
                 >
                     
-                    {
+                 {
                     restaurants.map((restaurant, index) => {
                         try {
                             if (restaurant.ctu == true) {
@@ -93,7 +93,7 @@ export default function HomeScreen() {
                             console.log(err)
                         }
                     })
-                }
+                 }
 
             </ScrollView>        
         </View>
@@ -107,6 +107,26 @@ export default function HomeScreen() {
                  {paddingHorizontal: 15}
                 }
                 >
+
+                 {
+                    restaurants.map((restaurant, index) => {
+                        try {
+                            if (restaurant.ctu == false && restaurant.toprated == false) {
+                                return (
+                                    <RestaurantCard className= "mx-5"
+                                    key={index}
+                                    name={restaurant.name}
+                                    description={restaurant.description}
+                                    address={restaurant.address}
+                                    image={restaurant.image}
+                                    />
+                                )
+                            } 
+                        } catch (err) {
+                            console.log(err)
+                        }
+                    })
+                 }
                 
                     
             </ScrollView>  
