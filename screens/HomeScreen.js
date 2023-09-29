@@ -43,7 +43,7 @@ export default function HomeScreen() {
                 {
                     restaurants.map((restaurant, index) => {
                         try {
-                            if (restaurant.toprated == true) {
+                            if (restaurant.rating >= 4) {
                                 return (
                                     <RestaurantCard className= "mx-5"
                                     key={index}
@@ -98,7 +98,7 @@ export default function HomeScreen() {
             </ScrollView>        
         </View>
         
-        <View className="bg-white px-4  min-h-full">
+        <View className="bg-white h-40 px-4">
             <Text className="text-black-300 font-medium"> Other Restaurants </Text>
             <ScrollView horizontal
                 className=" bg-white"
@@ -111,7 +111,7 @@ export default function HomeScreen() {
                  {
                     restaurants.map((restaurant, index) => {
                         try {
-                            if (restaurant.ctu == false && restaurant.toprated == false) {
+                            if (restaurant.ctu == false && restaurant.rating < 4) {
                                 return (
                                     <RestaurantCard className= "mx-5"
                                     key={index}
