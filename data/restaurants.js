@@ -17,7 +17,7 @@ export const restaurants = [
     {
         id: 2,
         name: 'Caffe 105',
-        description: 'Hot and spicy pizzas',
+        description: 'Pruža istinski užitak u potpuno prirodnom ugođaju',
         lng: -85.5324269,
         lat: 38.2145602,
         address: '434 second street',

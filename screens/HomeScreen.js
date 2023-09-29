@@ -51,6 +51,7 @@ export default function HomeScreen() {
                                     description={restaurant.description}
                                     address={restaurant.address}
                                     image={restaurant.image}
+                                    rating={restaurant.rating}
                                     />
                                 )
                             } 
@@ -86,6 +87,7 @@ export default function HomeScreen() {
                                     description={restaurant.description}
                                     address={restaurant.address}
                                     image={restaurant.image}
+                                    rating={restaurant.rating}
                                     />
                                 )
                             } 
@@ -119,6 +121,7 @@ export default function HomeScreen() {
                                     description={restaurant.description}
                                     address={restaurant.address}
                                     image={restaurant.image}
+                                    rating={restaurant.rating}
                                     />
                                 )
                             } 

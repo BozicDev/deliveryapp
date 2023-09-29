@@ -13,8 +13,9 @@ export default function RestaurantCard(props) {
            <Icon.MapPin width="15" height="15" color="white"></Icon.MapPin>
            <Text className="text-white pl-2">{props.address}</Text>
           </View>
-          <View flex flex-row>
-
+          <View className="flex flex-row pr-10 items-center pl-2">
+            <Icon.Star width="15" height="15" color="yellow" fill="yellow"></Icon.Star>
+            <Text className="text-white"> {props.rating}</Text>
           </View>
         </View>
       </View>
