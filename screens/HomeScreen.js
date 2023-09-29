@@ -65,13 +65,13 @@ export default function HomeScreen() {
 
          {/* Pokusati rjesiti slucaj renderovanja po kategorijama koriscenjem "case" ili "if" */}
 
-        <View className="bg-white h-40 px-4">
-            <Text className="text-black-300 font-medium"> Closest to you </Text>
+        <View className="bg-white h-40 px-4 mb-5">
+            <Text  className="text-black-300 font-medium pb-5"> Closest to you </Text>
             <ScrollView horizontal
                 className=" bg-white"
                  showsHorizontalScrollIndicator = {false}
                  contentContainerStyle = {
-                 {paddingHorizontal: 15}
+                 {paddingHorizontal: 0}
                 }
                 >
                     
@@ -98,8 +98,8 @@ export default function HomeScreen() {
             </ScrollView>        
         </View>
         
-        <View className="bg-white h-40 px-4">
-            <Text className="text-black-300 font-medium"> Other Restaurants </Text>
+        <View className="bg-white h-max-h px-4">
+            <Text className="text-black-300 font-medium pb-5"> Other Restaurants </Text>
             <ScrollView horizontal
                 className=" bg-white"
                  showsHorizontalScrollIndicator = {false}

@@ -1,5 +1,6 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
+import * as Icon from 'react-native-feather'
 
 export default function RestaurantCard(props) {
   return (
@@ -7,7 +8,10 @@ export default function RestaurantCard(props) {
       <View className=" bg-black-200 py-3">
         <Text className="text-white py-2">{props.name}</Text>
         <Text className="text-white text-xs pr-4 pb-5">{props.description}</Text>
-        <Text className="text-white">{props.address}</Text>
+        <View className="flex flex-row items-center">
+          <Icon.MapPin width="15" height="15" color="white"></Icon.MapPin>
+          <Text className="text-white pl-2">{props.address}</Text>
+        </View>
       </View>
       <View className="flex justify-center items-center">
         <Image source={props.image} className=" h-20 w-20 flex"/>

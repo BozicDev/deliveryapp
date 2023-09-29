@@ -36,7 +36,7 @@ export const restaurants = [
         lng: -85.5324269,
         lat: 38.2145602,
         address: 'Donja Zimča BB, Visoko',
-        rating: 4,
+        rating: 3.5,
         reviews: '4.4k',
         category: 'Fast Food',
         dishes: "",
