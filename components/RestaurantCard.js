@@ -8,9 +8,14 @@ export default function RestaurantCard(props) {
       <View className=" bg-black-200 py-3">
         <Text className="text-white py-2">{props.name}</Text>
         <Text className="text-white text-xs pr-4 pb-5">{props.description}</Text>
-        <View className="flex flex-row items-center">
-          <Icon.MapPin width="15" height="15" color="white"></Icon.MapPin>
-          <Text className="text-white pl-2">{props.address}</Text>
+        <View className="flex flex-row justify-between">
+          <View className="flex flex-row items-center">
+           <Icon.MapPin width="15" height="15" color="white"></Icon.MapPin>
+           <Text className="text-white pl-2">{props.address}</Text>
+          </View>
+          <View flex flex-row>
+
+          </View>
         </View>
       </View>
       <View className="flex justify-center items-center">
