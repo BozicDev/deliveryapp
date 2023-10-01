@@ -2,7 +2,7 @@ export const restaurants = [
     {
         id: 1,
         name: 'Restoran Ušće',
-        description: `Najljepši zenički objekat za odmor`,
+        description: `Najljepši zenički\nobjekat za odmor`,
         lng: -85.5324269,
         lat: 38.2145602,
         address: 'Ušće 6, Zenica',
@@ -17,7 +17,7 @@ export const restaurants = [
     {
         id: 2,
         name: 'Caffe 105',
-        description: 'Pruža istinski užitak u potpuno prirodnom ugođaju',
+        description: 'Pruža istinski užitak\nu prirodnom ugođaju',
         lng: -85.5324269,
         lat: 38.2145602,
         address: '434 second street',
@@ -27,6 +27,7 @@ export const restaurants = [
         dishes: "",
         require: "",
         toprated: true,
+        image: require('../assets/restaurantimages/caffe105.jpg'),
         ctu: false,
   },
     {

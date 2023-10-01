@@ -3,14 +3,14 @@ import * as Icon from 'react-native-feather'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
-import { Categories, RestaurantCard } from '../components'
+import { Categories, RestaurantCard, TopRated } from '../components'
 import { restaurants } from '../data/restaurants'
 
 
 export default function HomeScreen() {
   return (
     <SafeAreaView className="bg-white pt-7">
-        <StatusBar barStyle = "dark-content"/>
+        <StatusBar/>
         <View className=" flex-row items-center space-x-2 px-4 pb-2">
             <View className=" flex-row flex-1 items-center px-3 py-2 rounded-full border border-gray-500">
                 <Icon.Search height="20" width="20" stroke="gray"/>
@@ -21,121 +21,12 @@ export default function HomeScreen() {
                 </View>
                 </View>
             </View>
-            {/* <View className="p-3 bg-orange-400 rounded-full" >
-                <Icon.Sliders height="25" width="25" strokeWidth={2.5} stroke="white"/>
-            </View> */}
         </View>
-
-    {/* main content */}
-
     <Categories/>
+    <TopRated/>
 
-    { /* Predlozeni restorani */}
-
-    <View className="mt-5">
-        <View className="bg-white h-40 px-4 mb-5">
-            <Text className="text-black-300 font-medium mb-5"> Top Rated Restaurants </Text>
-                <ScrollView horizontal
-                className=" bg-white"
-                 showsHorizontalScrollIndicator = {false}
-                >
-                
-                {
-                    restaurants.map((restaurant, index) => {
-                        try {
-                            if (restaurant.rating >= 4) {
-                                return (
-                                    <RestaurantCard className= "mx-5"
-                                    key={index}
-                                    name={restaurant.name}
-                                    description={restaurant.description}
-                                    address={restaurant.address}
-                                    image={restaurant.image}
-                                    rating={restaurant.rating}
-                                    />
-                                )
-                            } 
-                        } catch (err) {
-                            console.log(err)
-                        }
-                    })
-                }
-
-            </ScrollView>
-        </View>
 
          {/* Pokusati rjesiti slucaj renderovanja po kategorijama koriscenjem "case" ili "if" */}
-
-        <View className="bg-white h-40 px-4 mb-5">
-            <Text  className="text-black-300 font-medium pb-5"> Closest to you </Text>
-            <ScrollView horizontal
-                className=" bg-white"
-                 showsHorizontalScrollIndicator = {false}
-                 contentContainerStyle = {
-                 {paddingHorizontal: 0}
-                }
-                >
-                    
-                 {
-                    restaurants.map((restaurant, index) => {
-                        try {
-                            if (restaurant.ctu == true) {
-                                return (
-                                    <RestaurantCard className= "mx-5"
-                                    key={index}
-                                    name={restaurant.name}
-                                    description={restaurant.description}
-                                    address={restaurant.address}
-                                    image={restaurant.image}
-                                    rating={restaurant.rating}
-                                    />
-                                )
-                            } 
-                        } catch (err) {
-                            console.log(err)
-                        }
-                    })
-                 }
-
-            </ScrollView>        
-        </View>
-        
-        <View className="bg-white h-max-h px-4">
-            <Text className="text-black-300 font-medium pb-5"> Other Restaurants </Text>
-            <ScrollView horizontal
-                className=" bg-white"
-                 showsHorizontalScrollIndicator = {false}
-                 contentContainerStyle = {
-                 {paddingHorizontal: 15}
-                }
-                >
-
-                 {
-                    restaurants.map((restaurant, index) => {
-                        try {
-                            if (restaurant.ctu == false && restaurant.rating < 4) {
-                                return (
-                                    <RestaurantCard className= "mx-5"
-                                    key={index}
-                                    name={restaurant.name}
-                                    description={restaurant.description}
-                                    address={restaurant.address}
-                                    image={restaurant.image}
-                                    rating={restaurant.rating}
-                                    />
-                                )
-                            } 
-                        } catch (err) {
-                            console.log(err)
-                        }
-                    })
-                 }
-                
-                    
-            </ScrollView>  
-        </View>
-
-    </View>
 
     </SafeAreaView>
   )

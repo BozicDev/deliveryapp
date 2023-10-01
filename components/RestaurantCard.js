@@ -4,26 +4,24 @@ import * as Icon from 'react-native-feather'
 
 export default function RestaurantCard(props) {
   return (
-    <TouchableOpacity className= "ml-1  px-4 flex flex-row rounded-xl bg-slate-900" >
-      <View className=" bg-black-200 py-3">
-        <Text className="text-white py-2">{props.name}</Text>
-        <Text className="text-white text-xs pr-4 pb-5">{props.description}</Text>
-        <View className="flex flex-row justify-between">
-          <View className="flex flex-row items-center">
-           <Icon.MapPin width="15" height="15" color="white"></Icon.MapPin>
-           <Text className="text-white pl-2">{props.address}</Text>
+
+    <TouchableOpacity className=" bg-slate-800 ml-2 rounded-md w-72  flex flex-row justify-between items-center">
+      <View className=" pt-0 px-2">
+        <Text className=" text-white font-medium">{props.name}</Text>
+        <Text className=" text-sm text-gray-400 pt-2">{props.description}</Text>
+        <View className="flex flex-row">
+          <View className="flex flex-row pt-4 items-center">
+            <Icon.MapPin width={15} height={15} color="white"/>
+            <Text className="text-white font-light"> {props.address}</Text>
           </View>
-          <View className="flex flex-row pr-10 items-center pl-2">
-            <Icon.Star width="15" height="15" color="yellow" fill="yellow"></Icon.Star>
-            <Text className="text-white"> {props.rating}</Text>
+          <View className="flex flex-row">
+            
           </View>
         </View>
       </View>
-      <View className="flex justify-center items-center">
-        <Image source={props.image} className=" h-20 w-20 flex"/>
+      <View className="">
+        <Image source={props.image} className=" w-20 h-20 rounded-sm"/>
       </View>
-
-      {/* Pokusati rijesiti prikaz restaurantscreena isto sa uvjetnim renderovanjem */}
     </TouchableOpacity>
   )
 }
